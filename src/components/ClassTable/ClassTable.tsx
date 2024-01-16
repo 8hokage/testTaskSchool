@@ -1,12 +1,12 @@
-import { TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody, makeStyles } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { useTable } from "react-table";
-import styles from './styles.module.css';
+import { TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody } from "@mui/material";
 import { setUnRate } from "../../api/setUnRate";
 import { setRate } from "../../api/setRate";
 import { setUnRateImmidiate, setRateImmidiate } from "../../redux/slices/class/classReducer";
 import { schoolboysSelector, lessonSelector } from "../../redux/slices/class/selectors";
 import { showError } from "../../redux/slices/ui/uiReducer";
+import styles from './styles.module.css';
 
 export const ClassTable = () => {
   const dispatch = useDispatch();
@@ -57,7 +57,7 @@ export const ClassTable = () => {
   const columns = [
     {Header: 'No', accessor: 'order', Cell: ({row}: {row: {index: number}}) => <div>{row.index + 1}</div>},
     {Header: 'Name', accessor: 'fullName'},
-    ...lessonsForTable.map((item: any) => ({
+    ...lessonsForTable.map((item) => ({
       Header: item.Title,
       accessor: item.Title, 
       Cell: ({row}: {row:{original: Record<string, string>, index: number}}) => (

@@ -14,7 +14,7 @@ function App() {
   
   useEffect(() => {
     const getStudentsData = async () => {
-      dispatch(fetchClassData(2) as any);
+      dispatch(fetchClassData(2));
     }
 
     getStudentsData();

@@ -1,8 +1,5 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { getStudents } from '../../../api/getStudents';
-import { getLessons } from '../../../api/getLessons';
-import { getRate } from '../../../api/getRate';
-import { ILesson, ISchoolBoy } from '../../../types/general';
+import { createSlice } from '@reduxjs/toolkit';
+import { ILesson } from '../../../types/general';
 import { fetchClassData } from './actions';
 
 export interface ISchoolBoyWithRates extends Record<string, string> {
