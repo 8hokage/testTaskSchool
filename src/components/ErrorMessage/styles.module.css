@@ -1,0 +1,19 @@
+.error {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  border: 1px solid #131313;
+  border-radius: 4px;
+  background: #fff;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.closeBtn {
+  margin-left: 50px;
+  color: #ff0000;
+  cursor: pointer;
+}
