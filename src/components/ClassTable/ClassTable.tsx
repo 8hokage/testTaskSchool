@@ -30,7 +30,8 @@ export const ClassTable = () => {
           lessonTitle: lessons[lessonId].Title,
         }));
 
-        setUnRate(2, schoolboyId, lessonId).catch(() => {
+        setUnRate(2, schoolboyId, lessonId).catch((e) => {
+          console.log(e);
           dispatch(showError('Failed to unrate'))
           dispatch(setRateImmidiate({
             schoolboyId: schoolboyId,

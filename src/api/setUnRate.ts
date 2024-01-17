@@ -13,6 +13,5 @@ export const setUnRate = async (classKey: number, schoolboyId: string, lessonId:
     throw new Error('Failed to unrate');
   }
 
-  const parsedData = await res.json();
-  return parsedData;
+  return res;
 }

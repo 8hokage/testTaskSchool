@@ -17,6 +17,5 @@ export const setRate = async (classKey: number, schoolboyId: string, lessonId: s
     throw new Error('Failed to rate');
   }
 
-  const parsedData = await res.json();
-  return parsedData;
+  return res;
 }
